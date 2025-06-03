@@ -131,7 +131,7 @@ watch(showSeeAll, () => {
 .scroll-button {
   @apply absolute top-1/2 -translate-y-1/2 z-20 
          bg-black/80 hover:bg-black/90 hover:scale-110
-         text-white rounded-full p-2
+         text-white rounded-full p-2 cursor-pointer
          opacity-0 transition-opacity duration-200;
 }
 

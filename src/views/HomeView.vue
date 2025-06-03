@@ -95,8 +95,8 @@ function handleSeeAll(category) {
 }
 
 .hero-section {
-  @apply relative h-[30vh] pb-8 pt-8;
-  @apply sm:h-[40vh] md:h-[50vh];
+  @apply relative pb-8 pt-8;
+  @apply sm:h-[40vh] md:h-[30vh];
 }
 
 .hero-gradient {

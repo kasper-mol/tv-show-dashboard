@@ -64,7 +64,7 @@ const categoryShows = computed(() => showsByGenre.value[currentCategory.value] |
 }
 
 .back-button {
-  @apply text-gray-300 hover:text-white flex items-center gap-2 mb-6;
+  @apply text-gray-300 hover:text-white flex items-center gap-2 mb-6 cursor-pointer;
 }
 
 .category-title {
@@ -80,6 +80,6 @@ const categoryShows = computed(() => showsByGenre.value[currentCategory.value] |
 }
 
 .shows-grid {
-  @apply grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-6;
+  @apply grid grid-cols-2 justify-items-center sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-6;
 }
 </style>
