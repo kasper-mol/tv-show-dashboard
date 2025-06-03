@@ -1,58 +1,29 @@
 # TV Shows Dashboard
 
-A Vue.js application that displays TV shows from the TVMaze API, allowing users to browse shows by genre and search for specific shows.
+A modern Vue.js application that displays TV shows information from the TVMaze API. Browse shows by genre, search for specific shows, and explore detailed information about your favorite series.
 
-## Features
+## 🌟 Features
 
-- Browse TV shows by genre in horizontal scrollable lists
-- Search for TV shows by name
-- View detailed information about each show, including:
-  - Show summary
-  - Rating
-  - Cast information
-  - Network and schedule details
-- Responsive design that works on mobile and desktop
-- Clean and modern UI with smooth animations
-- Efficient state management with Pinia
-- Component-based architecture with reusable components
+- **Genre-based Browsing**: Navigate TV shows by genre in smooth, horizontal scrollable lists
+- **Search Functionality**: Find shows instantly by name with debounced search
+- **Detailed Show Information**:
+  - Show summary and plot
+  - Rating and reviews
+  - Cast and crew information
+  - Network details and broadcast schedule
+- **Responsive Design**: Seamless experience across all devices
+- **Modern UI/UX**: Clean interface with fluid animations
+- **State Management**: Efficient state handling with Pinia
+- **Component Architecture**: Modular, reusable components
 
-## Technical Decisions
-
-### Framework Choice: Vue.js
-
-Vue.js was chosen for this project because:
-
-- It provides an excellent developer experience with its Composition API
-- It has a gentle learning curve while being powerful enough for complex applications
-- It offers great performance out of the box
-- It has a strong ecosystem with tools like Vue Router and Pinia
-
-### State Management: Pinia
-
-Pinia was selected over Vuex because:
-
-- It provides better TypeScript support
-- It has a simpler and more intuitive API
-- It's the new official state management solution for Vue.js
-- It offers better developer tools integration
-
-### Styling Approach
-
-The project uses a combination of:
-
-- Custom CSS for global styles and animations
-- Scoped component styles for component-specific styling
-- CSS utility classes for common patterns
-- This approach provides a good balance between maintainability and flexibility
-
-## Project Setup
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js version 18 or higher
-- npm version 9 or higher
+- Node.js ≥ 18.0.0
+- npm ≥ 9.0.0
 
-### Installation
+### Quick Start
 
 1. Clone the repository:
 
@@ -67,79 +38,97 @@ cd tv-shows-dashboard
 npm install
 ```
 
-3. Start the development server:
+3. Start development server:
 
 ```bash
 npm run dev
 ```
 
-4. Build for production:
+4. For production build:
 
 ```bash
 npm run build
 ```
 
-## Testing
+## 🧪 Testing
 
-The project includes unit tests using Vitest. To run the tests:
+Run unit tests with Vitest:
 
 ```bash
 npm run test:unit
 ```
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 src/
 ├── assets/         # Static assets and global styles
 ├── components/     # Reusable Vue components
+│   ├── base/      # Base UI components
+│   └── shows/     # Show-specific components
 ├── router/         # Vue Router configuration
-├── services/       # API and utility services
-├── store/          # Pinia stores
-├── views/          # Page components
-└── App.vue         # Root component
+├── services/      # API and utility services
+├── store/         # Pinia stores
+├── views/         # Page components
+└── App.vue        # Root component
 ```
 
-## Component Architecture
+## 🏗️ Architecture
 
-The application is built with the following key components:
+### Key Components
 
-- `BaseButton.vue`: Reusable button component with different variants
-- `ShowCard.vue`: Card component for displaying show information
-- `HorizontalList.vue`: Scrollable list component for show genres
-- `SearchInput.vue`: Search input with debouncing
-- `RatingStars.vue`: Star rating display component
+- `ShowCard.vue`: Show information display card
+- `HorizontalList.vue`: Genre-based show list
+- `SearchInput.vue`: Debounced search input
+- `RatingStars.vue`: Interactive rating display
 
-## API Integration
+### Technical Stack
 
-The application integrates with the TVMaze API using the following endpoints:
+- **Framework**: Vue.js with Composition API
+- **State Management**: Pinia
+- **Routing**: Vue Router
+- **Testing**: Vitest
+- **API Integration**: TVMaze API
+- **Styling**: Tailwind CSS with scoped components
 
-- `/shows`: Get all shows
-- `/search/shows`: Search shows by name
-- `/shows/:id`: Get detailed show information
-- `/shows/:id/cast`: Get show cast information
+## 🏗️ Architectural Decisions
 
-## Future Improvements
+### Vue.js & Composition API
 
-Potential areas for enhancement:
+We chose Vue.js as our primary framework for several key reasons:
 
-1. Add more advanced filtering options
-2. Implement show favorites functionality
-3. Add more detailed cast information
-4. Implement infinite scrolling for show lists
-5. Add more comprehensive error handling
-6. Implement caching for API responses
-7. Add end-to-end tests
-8. Implement PWA features
+- **Performance**: Vue's virtual DOM and reactive system offer excellent performance out of the box
+- **Developer Experience**: Excellent tooling support with Vue DevTools and Volar
+- **Component Model**: Intuitive component system that encourages reusability and maintainability
+- **Growing Ecosystem**: Rich ecosystem of plugins and libraries that integrate seamlessly
+- **Preffered Framework**: Vue is the preffered framework for both the software engineer and the business
 
-## Contributing
+### Pinia for State Management
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+Pinia was selected as our state management solution because:
 
-## License
+- **Modular Design**: Stores can be split into multiple files and imported as needed
+- **DevTools Integration**: Excellent debugging capabilities with Vue DevTools
+- **Composition API Compatible**: Perfect integration with Vue's Composition API
+- **Simpler API**: More intuitive API compared to Vuex with less boilerplate
+- **Future Proof**: Official state management solution for Vue.js
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+### Tailwind CSS
+
+We implemented Tailwind CSS for styling because:
+
+- **Utility-First**: Rapid UI development with predefined utility classes
+- **Customization**: Easy to extend and customize through configuration
+- **Performance**: Built-in purge system for minimal production CSS
+- **Responsive Design**: Intuitive breakpoint system for responsive layouts
+- **Component Consistency**: Standardized design tokens ensure consistent UI
+- **Developer Productivity**: Faster development with inline styling without context switching
+
+## 🔌 API Integration
+
+The application uses the following TVMaze API endpoints:
+
+- `GET /shows`: Retrieve all shows
+- `GET /search/shows`: Search shows by name
+- `GET /shows/:id`: Get detailed show information
+- `GET /shows/:id/cast`: Fetch cast information
